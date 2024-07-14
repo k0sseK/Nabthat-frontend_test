@@ -1,8 +1,8 @@
 # Wynik zadania
 
 ### DODATKOWE PLUSY
-✅ Osadzenie całego zadania w jakimś JSowym frameworku (najlepiej Angular).
-✅ Brak plików graficznych w końcowym projekcie (brak plików typu jpg, gif, png, svg).
+- ✅ Osadzenie całego zadania w jakimś JSowym frameworku (najlepiej Angular).
+- ✅ Brak plików graficznych w końcowym projekcie (brak plików typu jpg, gif, png, svg).
 ✅ CSS IS AWESOME w footerze - po najechaniu myszką ramka (bez tekstu) powinna wykonać animowany obrót.
 ✅ Zastosowanie BEM.
 ✅ Spełnianie zasad a11y.
