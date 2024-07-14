@@ -56,7 +56,7 @@
             </div>
             <div class="main__columns__column">
                 <div class="block">
-                    <span class="block__title">blok DRUGI</span>
+                    <span class="block__title">BLOK DRUGI</span>
                     <div class="block__buttons">
                         <div class="block__buttons__button" @click="replaceContent()">Zastąp</div>
                         <div class="block__buttons__button" @click="addContent()">Doklej</div>
@@ -79,28 +79,26 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import content from '../assets/content.json'
+import { useContentStore } from '@/stores/content'
 
 type ContentOption = 'first' | 'second' | 'random' | 'none'
 const selectedOption = ref<ContentOption>('none')
 const blockContent = ref<string[]>([])
 
-interface ContentItem {
-    text: string
-}
+const store = useContentStore()
 
 const selectOption = (event: Event) => {
-    const target = event.target as HTMLSelectElement
+    const target = event.target as HTMLInputElement
     selectedOption.value = target.value as ContentOption
 }
 
 const getContent = (): string => {
     const mapping: { [key in ContentOption]: () => string } = {
-        first: () => content[0].text,
-        second: () => content[1].text,
+        first: () => store.getContent[0]?.text || 'Brak treści',
+        second: () => store.getContent[1]?.text || 'Brak treści',
         random: () => {
-            const unusedContent = content.filter(
-                (item: ContentItem) => !blockContent.value.includes(item.text)
+            const unusedContent = store.getContent.filter(
+                (item) => !blockContent.value.includes(item.text)
             )
             if (unusedContent.length === 0) {
                 return 'Brak unikalnych treści do dodania.'
