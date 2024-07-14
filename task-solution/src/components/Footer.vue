@@ -45,13 +45,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import eventBus from '../eventBus'
 
 const visibleMenu = ref<boolean>(false)
 
 const toggleMenu = () => {
-    console.log('toggle')
     visibleMenu.value = !visibleMenu.value
-    console.log(visibleMenu.value)
 }
 
 const closeMenu = () => {
@@ -59,10 +58,14 @@ const closeMenu = () => {
 }
 
 const resetSettings = () => {
+    eventBus.emit('hideName')
     closeMenu()
 }
 
-const showName = () => {}
+const showName = () => {
+    eventBus.emit('showName')
+    closeMenu()
+}
 </script>
 
 <style lang="scss" scoped>
