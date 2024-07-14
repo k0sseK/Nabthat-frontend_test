@@ -108,10 +108,10 @@ const getContent = (): string => {
             const randomIndex = Math.floor(Math.random() * unusedContent.length)
             return unusedContent[randomIndex].text
         },
-        none: () => 'Nieprawidłowa opcja'
+        none: () => 'Proszę wybrać opcję!'
     }
 
-    return mapping[selectedOption.value]?.() || 'Nieprawidłowa opcja'
+    return mapping[selectedOption.value]?.() || 'Proszę wybrać opcję!'
 }
 
 const addContent = () => {
