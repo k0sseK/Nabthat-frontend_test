@@ -150,7 +150,12 @@ const replaceContent = () => {
     flex-direction: column;
     align-items: center;
     padding: 4rem;
+    min-height: 100vh;
     color: $white;
+
+    @media (max-width: 960px) {
+        padding: 1.6rem;
+    }
 
     &__header {
         text-align: center;
@@ -179,9 +184,20 @@ const replaceContent = () => {
         max-width: 98vw;
         width: 100%;
 
+        @media (max-width: 960px) {
+            gap: 1rem;
+        }
+
         &__column {
             flex: 2;
             min-width: 9rem;
+
+            @media (max-width: 960px) {
+                margin: 0 -0.6rem;
+                &:nth-child(3) {
+                    margin-top: 1rem;
+                }
+            }
         }
     }
 
@@ -252,6 +268,11 @@ const replaceContent = () => {
             flex-direction: row;
             gap: 2rem;
 
+            @media (max-width: 960px) {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
             &__button {
                 text-transform: uppercase;
                 border: 1px solid $white;
@@ -260,6 +281,12 @@ const replaceContent = () => {
                 font-weight: $fw-700;
                 color: $light-grey;
                 transition: background-image 0.2s ease-in-out;
+
+                @media (max-width: 960px) {
+                    padding: 0;
+                    text-align: center;
+                    padding: 0.6rem;
+                }
 
                 &:hover {
                     cursor: pointer;

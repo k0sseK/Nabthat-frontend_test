@@ -72,8 +72,6 @@ const showName = () => {
 @import '../assets/styles/variables.scss';
 
 .footer {
-    position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -219,6 +217,22 @@ const showName = () => {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 960px) {
+    .footer {
+        align-items: center;
+
+        .footer__center {
+            display: none;
+        }
+
+        &__right {
+            text-align: center;
+            width: 50%;
+            // padding: 1rem;
+        }
     }
 }
 </style>

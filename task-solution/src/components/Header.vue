@@ -63,6 +63,12 @@ onBeforeUnmount(() => {
     padding: 1.2em;
     height: 11vh;
 
+    @media (max-width: 960px) {
+        padding: 1rem;
+        height: auto;
+        align-items: center;
+    }
+
     &__logo-container {
         display: flex;
         align-items: center;
@@ -96,6 +102,11 @@ onBeforeUnmount(() => {
             font-size: 1.6em;
             color: $white;
             font-weight: 400;
+
+            @media (max-width: 960px) {
+                font-size: 1.2rem;
+                margin-bottom: 0.25rem;
+            }
         }
 
         .header__title-author {
