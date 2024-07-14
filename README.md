@@ -16,4 +16,4 @@
 Link do netlify: https://master--marcel-nabthaht-frontend-test.netlify.app/ 
 
 ### ZADANIE NA 6 :)
-- ❌ Wykorzystać localStorage do załadowania treści z pliku i ich późniejszego przechowywania oraz napisać dodatkową funkcjonalność pozwalającą na zarządzanie nimi (dodawanie/edycja/usuwanie).
+- ✅ Wykorzystać localStorage do załadowania treści z pliku i ich późniejszego przechowywania oraz napisać dodatkową funkcjonalność pozwalającą na zarządzanie nimi (dodawanie/edycja/usuwanie).
